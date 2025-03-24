@@ -71,7 +71,7 @@ app.controller("ProductController", [
         .then((response) => {
           $scope.$applyAsync(() => {
             const relativeUrl = response.data.url;
-            const fullUrl = response.data.url; 
+            const fullUrl = `http://127.0.0.1:3001${relativeUrl}`;
             $scope.formData.image = fullUrl;
           });
         })
